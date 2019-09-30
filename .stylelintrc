@@ -1,0 +1,29 @@
+{
+  "ignoreFiles": [
+    "./node_modules/**",
+    "./config/**",
+    "./scripts/**",
+    "./build/**"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "rules": {
+    "no-extra-semicolons": true,
+    "declaration-block-trailing-semicolon": "always",
+
+    "order/order": [
+      { "type": "at-rule" },
+      { "type": "at-rule", "name": "mixin" },
+      { "type": "at-rule", "name": "extend" },
+      { "type": "at-rule", "name": "include", "hasBlock": false },
+      "dollar-variables",
+      "custom-properties",
+      "declarations",
+      { "type": "at-rule", "name": "media" },
+      { "type": "at-rule", "name": "include", "hasBlock": true },
+      "rules"
+    ]
+  }
+}

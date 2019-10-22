@@ -47,7 +47,6 @@
     "stylelint-order": "^3.1.1",
     "stylelint-scss": "^3.10.1",
     "tail": "^2.0.3",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.5.0",
     "webpack-dev-middleware": "^3.1.2",
     "webpack-hot-middleware": "^2.21.2",

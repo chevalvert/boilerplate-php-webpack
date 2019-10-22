@@ -3,8 +3,6 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const UglifyPlugin = require('uglifyjs-webpack-plugin')
-
 const common = require('./webpack.config.common')
 const user = require('../scripts/utils/format-config')(require('./main.config.js'))
 
@@ -37,17 +35,6 @@ const prodConfig = {
           : getPath('[name]').slice(0, -ext.length) + '.css'
       },
       allChunks: true
-    }),
-    new UglifyPlugin({
-      sourceMap: true,
-      parallel: true,
-      uglifyOptions: {
-        mangle: true,
-        keep_classnames: true,
-        keep_fnames: false,
-        compress: { inline: false, drop_console: false },
-        output: { comments: false }
-      }
     }),
 
     new webpack.optimize.OccurrenceOrderPlugin()

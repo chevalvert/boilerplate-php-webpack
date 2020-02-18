@@ -55,7 +55,7 @@ Promise.resolve()
                   if (childStats.compilation && childStats.compilation.warnings) {
                     childStats.compilation.warnings.map(sh.warn)
                   }
-                });
+                })
               }
             }
           }
@@ -80,7 +80,7 @@ function webpackErrorMessage() {
 }
 
 function webpackError (err) {
-  webpackErrorMessage();
+  webpackErrorMessage()
   sh.error(err)
   sh.exit(0)
 }

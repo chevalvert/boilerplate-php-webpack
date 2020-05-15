@@ -33,6 +33,14 @@
   }
 }
 
+@mixin clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
 @mixin checkerboard ($size: 48px, $color: #808080, $background: white) {
   background-color: $background;
   background-image:
